@@ -26,7 +26,7 @@ df_outflow = pd.read_csv(url_outflow)
 #membangun komponen
 header = html.H1("Aplikasi Simulasi Kapasitas Embung B ITERA", style={'textAlign': 'center', "height":"100 px", "background-color":"pink"})
 subtitle = html.H5("Tugas Besar Kapita Selekta Matematika Komputasi (KELOMPOK 3)", style={'textAlign': 'center', "height":"3 px", "background-color":"lightblue"})
-footer = html.Div([html.H1("Institut Teknologi Sumatera"),html.H5("Jl. Terusan Ryacudu, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365"), html.P("Zessica Nainggolan | Christina Jheovani| Ayumi Rima| Alviolita Br.Barus | Yanti Marito| Holi Safira| Jesika Ginting"), html.P("created @ 2022 by|072|")], style={'textAlign': 'center', "height":"3 px", "background-color":"orange"})
+footer = html.Div([html.H1("Institut Teknologi Sumatera"),html.H5("Jl. Terusan Ryacudu, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365"), html.P("Zessica Nainggolan | Christina Jheovani| Ayumi Rima| Alviolita Br.Barus | Yanti Marito| Holi Safira| Jesika Ginting"), html.P("created @ 2022 by|072|")], style={'textAlign': 'center', "height":"3 px", "background-color":"pink"})
 inflow_fig = go.FigureWidget()
 inflow_fig.add_scatter(name='Inflow', x=df_inflow['Bulan'], y=df_inflow['Data-masuk'])
 inflow_fig.layout.title = 'Plot Air Yang Masuk'
