@@ -17,8 +17,8 @@ app = dash.Dash(__name__, server=server, external_stylesheets=[dbc.themes.BOOTST
 #membaca file
 sheet_inflow = "inflow"
 sheet_outflow = "outflow"
-url_inflow = "https://docs.google.com/spreadsheets/d/1W4L0wz-m5Y0V1-7qgi7ziZgnTGrCycPbV3ZLDucx3t8/edit?usp=sharing{sheet_inflow}"
-url_outflow = url="https://docs.google.com/spreadsheets/d/1TNQ5gVHW5HApcVssWSF8gMd9NJpUsV6hlJB_jYAFzeA/edit?usp=sharing{sheet_outflow}"
+url_inflow = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRsxRP6lGuCaWHEZ8Ouhgol0e5fLVTXaApbpb646oNyAI_KRmpZWSI14c7_iHZkn6FD_hrw7unb6ZRI/pub?output=csv&sheet={sheet_inflow}"
+url_outflow = url="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUJjwNCRuvaEYhPaXUyKnq47Dh11NuXAKwAnlPYjTPktm68yI3wweTKfZF4nPCofZsiFA6MtC1eUeY/pub?output=csv&sheet={sheet_outflow}"
 df_inflow = pd.read_csv(url_inflow)
 df_outflow = pd.read_csv(url_outflow)
 
@@ -26,7 +26,7 @@ df_outflow = pd.read_csv(url_outflow)
 #membangun komponen
 header = html.H1("Aplikasi Simulasi Kapasitas Embung B ITERA", style={'textAlign': 'center', "height":"100 px", "background-color":"purple"})
 subtitle = html.H5("Tugas Besar Kapita Selekta Matematika Komputasi (KELOMPOK 3)", style={'textAlign': 'center', "height":"3 px", "background-color":"lightblue"})
-footer = html.Div([html.H1("Institut Teknologi Sumatera"),html.H5("Jl. Terusan Ryacudu, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365"), html.P("Zessica Nainggolan | Christina Jheovani| Ayumi Rima Saka Putri| Alviolita Br.Barus | Yanti Marito| Holi Safira| Jesika Ginting"), html.P("created @ 2022 by|072|")], style={'textAlign': 'center', "height":"3 px", "background-color":"orange"})
+footer = html.Div([html.H1("Institut Teknologi Sumatera"),html.H5("Jl. Terusan Ryacudu, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365"), html.P("Zessica Nainggolan | Christina Jheovani| Ayumi Rima| Alviolita Br.Barus | Yanti Marito| Holi Safira| Jesika Ginting"), html.P("created @ 2022 by|072|")], style={'textAlign': 'center', "height":"3 px", "background-color":"orange"})
 inflow_fig = go.FigureWidget()
 inflow_fig.add_scatter(name='Inflow', x=df_inflow['Bulan'], y=df_inflow['Data-masuk'])
 inflow_fig.layout.title = 'Plot Air Yang Masuk'
